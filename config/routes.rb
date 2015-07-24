@@ -53,4 +53,13 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+	get 'errors/file_not_found'
+
+  	get 'errors/unprocessable'
+
+	get 'errors/internal_server_error'
+
+	match '/404', to: 'errors#file_not_found', via: :all
+
 end
